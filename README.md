@@ -1,8 +1,6 @@
 # MDP Value Iteration for Fishery Management
 
-This repository contains a Python implementation of **Value Iteration** to solve a **Markov Decision Process (MDP)** modeling a sustainable fish harvesting problem. The project was developed as part of **CENG461 – Artificial Intelligence** coursework.
-
----
+This repository contains a Python implementation of **Value Iteration** to solve a **Markov Decision Process (MDP)** modeling a sustainable fish harvesting problem.
 
 ## Problem Description
 
@@ -11,8 +9,6 @@ A lake contains a fish population with a maximum carrying capacity. Each year:
 - The remaining population grows stochastically according to several possible growth rates
 
 The objective is to **maximize the long-term discounted reward**, where the reward is the number of fish harvested each year, while accounting for uncertainty in population growth.
-
----
 
 ## Markov Decision Process Formulation
 
@@ -39,7 +35,6 @@ The objective is to **maximize the long-term discounted reward**, where the rewa
 - **Discount Factor:**  
   \( \gamma = 0.9 \)
 
----
 
 ## Solution Method
 
@@ -51,16 +46,12 @@ U_{k+1}(s) = \max_a \left[ R(s,a) + \gamma \sum_{s'} P(s' \mid s,a) U_k(s') \rig
 
 The algorithm iteratively updates state utilities and extracts the optimal action for each state.
 
----
-
 ## Implementation Details
 
 - Transition probabilities explicitly computed for each growth rate
 - Population capped at the maximum capacity
 - Tie-breaking handled by rounding up when needed
 - Policy and utility values printed after iterations
-
----
 
 ## Technologies Used
 
